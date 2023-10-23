@@ -19,7 +19,7 @@ export const HeadCard: React.FC<HeadCardProps> = ({
     <div
       className={`${className} gap-5 flex flex-col justify-center items-center`}
     >
-      <div className="flex justify-center items-center gap-8">
+      <div className="flex flex-col justify-center items-center gap-8">
         <h1 className={`${titleStyle}`}>{title}</h1>
         <span className={`${subtitleStyle}`}>{subtitle}</span>
       </div>

@@ -5,6 +5,8 @@ import { Button } from '@nx-monorepo/atom';
 export interface SubscribeItemProps {
   data: any[];
   cardStyle?: string;
+  styleAvatar?: string;
+  styleAvatarIcon?: string;
   styleHead?: string;
   styleFooter?: string;
   className?: string;
@@ -13,6 +15,8 @@ export interface SubscribeItemProps {
 export const SubscibeItem: React.FC<SubscribeItemProps> = ({
   data,
   cardStyle,
+  styleAvatar,
+  styleAvatarIcon,
   styleFooter,
   styleHead,
   className,
@@ -24,11 +28,15 @@ export const SubscibeItem: React.FC<SubscribeItemProps> = ({
           <Card
             styleFooter={`${styleFooter}${index === 1 ? ' bg-gray-200 ' : ''}`}
             styleHead={`${styleHead}`}
+            styleAvatar={`${styleAvatar}`}
+            styleAvatarIcon={`${styleAvatarIcon}`}
+            propsAvatar={{ icon: item.icon }}
             propsHead={{ title: item.title, subtitle: item.subtitle }}
             propsFooter={{
               price: item.price,
               priceStyle: 'text-[40px] font-semibold',
               textStyle: 'text-gray-700 px-4',
+              subscriptionTypeText: item.subscriptionTypeText,
             }}
             className={`${cardStyle}`}
           >

@@ -6,10 +6,12 @@ export interface FooterCardProps {
   priceStyle?: string;
   className?: string;
   textStyle?: string;
+  subscriptionTypeText?: string;
 }
 
 export const FooterCard: React.FC<FooterCardProps> = ({
   price,
+  subscriptionTypeText,
   children,
   priceStyle,
   className,
@@ -21,7 +23,7 @@ export const FooterCard: React.FC<FooterCardProps> = ({
     >
       <div className="flex justify-center items-center">
         <h1 className={`${priceStyle}`}>{price}</h1>
-        <span className={`${textStyle}`}>per bulan</span>
+        <span className={`${textStyle}`}>{subscriptionTypeText}</span>
       </div>
       {children}
     </div>

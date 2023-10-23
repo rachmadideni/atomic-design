@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/dist/apps/admin-project/index.html"
+      "destination": "/dist/apps/admin-project"
     }
   ]
 }
